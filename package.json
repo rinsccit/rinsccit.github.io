@@ -1,5 +1,8 @@
 {
-  "name": "cleanfolio",
+  "name": "my-personal-portfolio",
+  "engines": {
+    "node": "16.x"
+  },
   "version": "0.1.0",
   "private": true,
   "homepage": "https://www.github.com/rinsccit/my-personal-portfolio",

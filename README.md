@@ -63,6 +63,16 @@ npm run deploy
 - Replace or add images in public/images.
 - Add documents (for example, your curriculum vitae in Portable Document Format) in public/documents.
 
+## Resume Button Behaviour
+
+- The portfolio uses one Resume button in the About section.
+- Clicking this button opens the curriculum vitae in a new tab.
+
+## External Link Security
+
+- All links that use target="_blank" include rel="noreferrer".
+- This follows recommended security practice for opening external links in a new tab.
+
 ## Licence
 
 This project is released under the M.I.T Licence.

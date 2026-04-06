@@ -35,6 +35,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.15rem;
 }
 
 .skills__list-item {
@@ -50,5 +51,19 @@
   .skills__column--partition {
     border-left: 0;
     border-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills__column {
+    padding: 0.85rem 0.55rem 0.95rem;
+  }
+
+  .skills__column-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .skills__list-item {
+    margin: 0.25em;
   }
 }

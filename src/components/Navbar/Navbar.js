@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
 import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -20,18 +20,42 @@ const Navbar = () => {
   const [showNavList, setShowNavList] = useState(false)
 
   const toggleNavList = () => setShowNavList(!showNavList)
+  const closeNavList = () => setShowNavList(false)
+
+  useEffect(() => {
+    if (!showNavList || window.innerWidth > 1024) return undefined
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [showNavList])
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1024) {
+        setShowNavList(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
     <nav className='center nav'>
       <ul
         style={{ display: showNavList ? 'flex' : null }}
+        id='nav-menu'
         className='nav__list'
       >
         {education.length ? (
           <li className='nav__list-item'>
             <a
               href='#education'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Education
@@ -43,7 +67,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#certifications'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Certifications
@@ -55,7 +79,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#projects'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Projects
@@ -67,7 +91,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#skills'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Skills
@@ -79,7 +103,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#contact'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Contact
@@ -90,7 +114,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#experience'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Work Experience
@@ -102,7 +126,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a
               href='#volunteer-experience'
-              onClick={toggleNavList}
+              onClick={closeNavList}
               className='link link--nav'
             >
               Volunteer Experience
@@ -125,6 +149,8 @@ const Navbar = () => {
         onClick={toggleNavList}
         className='btn btn--icon nav__hamburger'
         aria-label='toggle navigation'
+        aria-expanded={showNavList}
+        aria-controls='nav-menu'
       >
         {showNavList ? <CloseIcon /> : <MenuIcon />}
       </button>

@@ -1,5 +1,5 @@
 .project {
-  min-height: 30rem;
+  min-height: 27rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -192,6 +192,7 @@
 .project__details-modal-scroll {
   overflow-y: auto;
   padding-right: 0.2rem;
+  overscroll-behavior: contain;
 }
 
 .project__details-modal-content {
@@ -231,6 +232,15 @@
   .project {
     min-height: 0;
     padding: 1.05em;
+  }
+
+  .project__lightbox {
+    padding: 0.9em;
+  }
+
+  .project__lightbox-close {
+    top: 0.55rem;
+    right: 0.55rem;
   }
 
   .project__details-modal {

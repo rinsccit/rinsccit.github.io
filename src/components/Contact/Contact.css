@@ -1,14 +1,33 @@
 .contact {
   flex-direction: column;
+  text-align: center;
+  width: 100%;
 }
 
 .link-primary {
-  color: blue;;
+  color: var(--clr-primary);
   text-decoration: underline;
 }
 
-.or {
-  margin: 20px 0;
-  font-size: 18px;
+.contact__actions {
+  margin-top: 0.3rem;
+}
+
+.contact__or {
+  margin: 1.2rem 0 0.7rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   font-weight: bold;
+}
+
+.contact__alt {
+  max-width: 50ch;
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .contact__or {
+    margin-top: 1rem;
+  }
 }

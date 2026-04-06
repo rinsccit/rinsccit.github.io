@@ -35,7 +35,7 @@
   background: transparent;
   color: var(--clr-fg);
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   gap: 1em;
   align-items: center;
   text-align: left;
@@ -51,11 +51,13 @@
 .education-item__institution {
   font-size: 1.05rem;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 .education-item__university {
   font-size: 1.05rem;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 

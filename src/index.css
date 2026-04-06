@@ -15,6 +15,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -24,19 +28,26 @@ h4 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(2.1rem, 6vw, 4rem);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 3.6vw, 2rem);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
 }
 
 ul {
@@ -54,5 +65,11 @@ button {
 @media (max-width: 900px) {
   h1 {
     font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
   }
 }

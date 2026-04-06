@@ -109,7 +109,7 @@ const projects = [
     outcome: 'The project is currently in development and has not been deployed yet but it has the potential to improve patient experience and operational efficiency in healthcare settings.',
     stack: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Zod'],
     sourceCode: 'https://github.com/NSCC-ITC-Winter2026-WEBD3031-700-MCa/project-waitwell.git',
-    livePreview: 'http://172.26.32.1:3000',
+    livePreview: 'https://waitwell-navy.vercel.app/',
     image: 'WaitWell.png',
   },
   {

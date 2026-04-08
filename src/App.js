@@ -18,21 +18,21 @@ const App = () => {
 
   return (
     <div id='top' className={`${themeName} app`}>
-      <Header />
+      <Header/>
 
       <main>
-        <About />
-        <Education />
-        <Certifications />
-        <Projects />
-        <Skills />
-        <Experience />
-        <VolunteerExperience />
-        <Contact />
+        <About/>
+        <Skills/>
+        <Projects/>
+        <Certifications/>
+        <Education/>
+        <Experience/>
+        <VolunteerExperience/>
+        <Contact/>
       </main>
 
-      <ScrollToTop />
-      <Footer />
+      <ScrollToTop/>
+      <Footer/>
     </div>
   )
 }

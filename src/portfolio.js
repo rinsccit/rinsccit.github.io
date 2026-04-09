@@ -1,11 +1,11 @@
 const header = {
-  // all the properties are optional - can be left empty or deleted
+  // All the properties are optional - can be left empty or deleted
   homepage: '/',
   title: 'RS.',
 }
 
 const about = {
-  // all the properties are optional - can be left empty or deleted
+  // All the properties are optional - can be left empty or deleted
   name: 'Rahul Sood',
   role: 'Website Developer',
   picture: 'https://avatars.githubusercontent.com/u/180576713?s=400&u=ae351496df162bfae6fb7bf6bd6279992b636627&v=4',
@@ -137,8 +137,8 @@ const projects = [
 ]
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
+  // Skills can be added or removed
+  // If there are no skills, Skills section won't show up
   'Bootstrap',
   'C.I/C.D',
   'C.S.S',

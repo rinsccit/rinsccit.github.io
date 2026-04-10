@@ -4,7 +4,7 @@ This repository contains my personal portfolio website and online curriculum vit
 
 ## Preview
 
-[![ImgBB](https://i.ibb.co/tTYbYQJh/image.png)](https://www.github.com/rinsccit/my-personal-portfolio)
+[![ImgBB](https://i.ibb.co/21cjcWk6/image.png)](https://www.github.com/rinsccit/my-personal-portfolio)
 
 [Live Demo](https://rinsccit.github.io)
 

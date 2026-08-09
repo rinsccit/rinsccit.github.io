@@ -24,7 +24,7 @@ const education = [
     institution: 'Nova Scotia Community College',
     university: 'Not Applicable',
     program: 'Information Technology (Web Programming) Diploma',
-    years: 'September 2024 - Present',
+    years: 'September 2024 - June 2026',
     location: 'Halifax, Nova Scotia',
     highlights: [
       'Focused on modern web development with JavaScript, React, and full-stack fundamentals.',
